@@ -1,0 +1,219 @@
+.course-card {
+    border-radius: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.course-4 {
+    background-color: rgb(253, 213, 226, .8);
+}
+
+.course-2 {
+    background-color: rgb(222, 193, 255, .8);
+}
+
+.course-3 {
+    background-color: rgb(216, 234, 255, .8);
+}
+.course-1 {
+    background-color: rgba(234, 252, 205, 0.8);
+}
+
+.courseButton {
+    color: white;
+    padding: 6px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.courseButton.course-4 {
+    background-color: rgb(247, 143, 176);
+}
+
+.courseButton.course-2 {
+    background-color: #c596fc;
+}
+
+.courseButton.course-3 {
+    background-color: #98bfec;
+}
+.courseButton.course-1 {
+    background-color: rgb(181, 253, 65);
+}
+
+
+.search-container,
+.notification-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 8px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.4);
+    color: rgb(161, 159, 159);
+    gap: 2px;
+    outline: none;
+}
+
+.search-box {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.search-box::placeholder {
+    color: rgb(161, 159, 159);
+}
+
+.profile-edit {
+    background-color: white;
+    padding: 3px 8px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.4);
+}
+
+.calendar-container {
+    background-color: rgba(230, 227, 227, 0.1);
+    border-radius: 1rem;
+    font-size: 13px;
+}
+
+.author-signature {
+    font-size: 12px;
+    color: rgb(78, 77, 77);
+}
+
+.date-nav-button {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(175, 174, 174, .3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.date-nav-button:hover {
+    background-color: rgb(218, 217, 217);
+}
+
+.date-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.selected-date {
+    background-color: rgb(109, 206, 174);
+    border-radius: 95px;
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+}
+
+.selected-date:hover {
+    background-color: rgb(45, 182, 143);
+}
+
+.date-field {
+    background-color: white;
+    border-radius: 50%;
+    padding: 6px 10px;
+    color: black
+}
+
+.schedule-card {
+    border: none;
+    border-radius: 15px;
+    min-height: 230px;
+    max-height: 230px;
+    width: 100%;
+}
+
+.schedule-card.odd {
+    background-color: rgb(245, 246, 247);
+}
+
+.schedule-card.even {
+    background-color: rgba(212, 164, 252, 0.6);
+}
+
+.schedule-card-category {
+    color: rgb(58, 58, 253);
+    background-color: white;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 15px;
+    width: fit-content;
+}
+
+.schedule-content,
+.recent-view {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.recent-view::-webkit-scrollbar {
+    display: none;
+}
+
+.schedule-content::-webkit-scrollbar {
+    display: none;
+}
+
+.schedule-title {
+    text-wrap: wrap;
+    font-size: 16px;
+}
+
+
+
+.recent-course-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.recent-course-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 12px;
+    text-overflow: ellipsis;
+}
+
+.recent-course-category {
+    color: rgb(58, 58, 253);
+    background-color: white;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 15px;
+    width: fit-content;
+}
+
+.schedule-review-time {
+    font-size: 12px;
+    display: block;
+    align-items: center;
+}

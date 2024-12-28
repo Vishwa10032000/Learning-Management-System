@@ -1,0 +1,122 @@
+
+
+.sidebar {
+    position: relative;
+    background:linear-gradient(to bottom, #FFF5BE, #D0F7EA);
+    height: 100vh; /* Full viewport height */
+    padding: 30px 0px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    transition: width 0.3s ease-in-out;
+}
+
+
+.sidebar.expanded {
+    width: 70px;
+}
+
+
+.nav-text.active {
+    opacity: 0;
+    max-height: 0; /* Initially collapsed */
+    overflow: hidden; /* Hides the content when collapsed */
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    margin: 0;
+}
+
+.nav-text {
+    opacity: 1; /* Fully visible */
+    max-height: 500px; /* Large enough to fit your content */
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    min-height: 40px;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.nav-item {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    min-width: 200px;
+    transition: all 0.3s;
+}
+
+.nav-item .right-border {
+    width: 6px;
+    height: 40px;
+    background-color: var(--surface-color);
+    /* border: 3px solid var(--text-primary); */
+    border-top-right-radius: 20px;
+    /* Rounded top-right corner */
+    border-bottom-right-radius: 20px;
+}
+
+.nav-item.active .right-border {
+    width: 6px;
+    height: 40px;
+    background-color: var(--text-primary);
+    /* border: 3px solid var(--text-primary); */
+    border-top-right-radius: 20px;
+    /* Rounded top-right corner */
+    border-bottom-right-radius: 20px;
+}
+
+.nav-item.active .nav-link {
+    font-weight: 600;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    padding: 0 10px;
+    font-size: 18px;
+    transition: all 0.3s;
+
+}
+
+.nav-item.active {
+    font-weight: 500;
+    /* border: 6px solid var(--text-primary); */
+
+}
+
+.expand-collapse-button-container {
+    padding: 0 20px;
+}
+
+.expand-collapse-button {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--background-color);
+    transition: all 0.3s;
+}
+
+.expand-collapse-button:hover {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+}

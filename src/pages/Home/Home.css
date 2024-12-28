@@ -1,0 +1,154 @@
+.hero-image-container {
+    width: 100%;
+    height: 82vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+}
+
+.hero-image-container::-webkit-scrollbar {
+    display: none;
+  }
+
+.hero-image-bg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.hero-content {
+   position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+    /* text-align: center; */
+    padding: 10px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.0); /* Optional for better contrast */
+}
+
+.hero-content h1 {
+    font-size: 58px;
+    margin: 0;
+    /* color: var(--background-color); */
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.hero-content button {
+    background-color: transparent;
+    color: #F67741;
+    border: 1px solid #F67741;
+    border-radius: 50px;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.hero-content button:hover {
+    background-color: #F67741;
+    color: white;
+}
+
+.indicator-container {
+    background: #FEF1EB; /* Adjust the alpha value (0.5) for desired opacity */
+    display: flex;
+    flex-direction: row;
+    border-radius: 50px;
+    min-height: 40px;
+}
+
+.indicator{
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.indicator.active{
+    background-color: #F67741;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+   
+.indicator-container{
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+
+.hero-content button {
+    padding: 8px 18px;
+    font-size: 14px;
+
+    }
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-content button {
+        font-size: 1rem;
+    }
+    .indicator{
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .hero-image-container {
+        height: 123vh;
+    }
+
+    
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-content button {
+        font-size: 1rem;
+    }
+
+    .indicator{
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+}

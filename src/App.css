@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Oswald:wght@200..700&display=swap');
+
+* {
+  font-family: "Figtree", serif;
+}
+
+:root {
+  --primary-color: #F67741;
+  --text-primary: #241a37;
+  --surface-color: #f4f4f4;
+  --background-color: #ffffff;
+}
+
+
+.primary-button {
+  background-color: transparent;
+  color: var(--primary-color);
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+
+.main-container {
+  flex: 1;
+  box-sizing: border-box;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+}
+.main-container::-webkit-scrollbar {
+  display: none;
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: #F67741;
+  border: 1px solid #F67741;
+  border-radius: 50px;
+  padding: 8px ;
+  font-size: 14px;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
