@@ -1,8 +1,8 @@
-import PurchaseOrder from "../../assets/purchase.svg";
-import AssetManagement from "../../assets/asset.svg";
+import PurchaseOrder from "../../assets/Learnings/Image (1).jpg";
+import AssetManagement from "../../assets/Learnings/Image (1).png";
 import ProductManagement from "../../assets/product.svg";
-import TravelRequest from "../../assets/travel.svg";
-import ProjectManagement from "../../assets/project.svg";
+import TravelRequest from "../../assets/Learnings/Image (3).png";
+import ProjectManagement from "../../assets/Learnings/Image (2).jpg";
 
 const SolutionsDataList = [
     {

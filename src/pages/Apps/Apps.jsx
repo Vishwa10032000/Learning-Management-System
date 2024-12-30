@@ -15,7 +15,7 @@ const AppsList = () => {
                 {AppDataList.map((app, index) => (
                     <div className="col-md-6 col-lg-3 col-sm-6 mb-4 " key={index}>
                         <div className="shadow apps-card rounded-4 h-100">
-                            <div className="apps-thumbnail">
+                            <div className="apps-thumbnail bg-white rounded-4">
                                 <img
                                     src={app.image}
                                     alt={app.app}
