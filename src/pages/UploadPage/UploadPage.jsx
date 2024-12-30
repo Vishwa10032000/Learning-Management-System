@@ -618,7 +618,7 @@ const UploadPage = ({ userType }) => {
                 {currentStep === 3 && (
                     <div className="step-content">
                         <div>
-                            <div className="d-flex justify-content-between">
+                            <div className="d-flex flex-wrap justify-content-between">
                                 <h3>Preview</h3>
                                 <div className="d-flex gap-1">
                                     <button className="upload-button" onClick={handleSubmit} >Save as Draft

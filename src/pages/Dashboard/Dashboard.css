@@ -1,3 +1,15 @@
+.dashboard{
+    padding: 0 10px;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+}
+
+.dashboard::-webkit-scrollbar {
+    display: none;
+}
+
 .course-card {
     border-radius: 15px;
     margin: 10px;

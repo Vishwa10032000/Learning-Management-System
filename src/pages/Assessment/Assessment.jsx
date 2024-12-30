@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Player } from "@lottiefiles/react-lottie-player";
 import Swal from "sweetalert2";
 import "./Assessment.css";
 import submitted from "../../assets/submitted.json";
 import question from "./AssessmentQuestion";
 import DragAndDrop from "./DargAndDrop";
 import { Modal } from "react-bootstrap";
+
 
 
 const Assessment = ({ onDataChange, category, Questions, QuestionCount, Score }) => {
@@ -19,16 +19,15 @@ const Assessment = ({ onDataChange, category, Questions, QuestionCount, Score })
             setQuestions(trainingQuestions);
         } else if (category === "Policies") {
             const policy = question.filter(
-                (q) => q.category === "Policies" );
+                (q) => q.category === "Policies");
             setQuestions(policy);
         } else if (category === "Orientations") {
             const OrientationQuestions = question.filter(
-                (q) => q.category === "Policies" );
+                (q) => q.category === "Policies");
             setQuestions(OrientationQuestions);
         }
     }, [category, Questions]);
 
-    console.log(questions[1].images.map((image) => (image)));
 
     const [userAnswers, setUserAnswers] = useState({});
     const [showResults, setShowResults] = useState(false);
@@ -142,7 +141,7 @@ const Assessment = ({ onDataChange, category, Questions, QuestionCount, Score })
                         {questions[currentQuestionIndex].questionType.toLowerCase() === "drag&drop" ? (
                             <DragAndDrop data={questions[currentQuestionIndex]} onDataChange={handleDragDrop} />) :
                             <div className="row">
-                                <div className=" col-md-6">
+                                <div className=" col-md-6 col-sm-12 col-12 mb-2">
                                     {questions[currentQuestionIndex].options.map((option) => {
                                         const isSelected = userAnswers[questions[currentQuestionIndex].id]?.includes(option);
 
@@ -182,24 +181,35 @@ const Assessment = ({ onDataChange, category, Questions, QuestionCount, Score })
                                         );
                                     })}
                                 </div>
-                                {(
-                                    <div className="col-md-6">
-                                        <div className="row" >
-                                            {questions[currentQuestionIndex].images.map((image, index) => {
-                                                <div className="col-md-6 mb-2" key={`image-${index}`} onClick={() =>
-                                                    handleOptionChange(
-                                                        questions[currentQuestionIndex]?.id,
-                                                        questions[currentQuestionIndex]?.options[index],
-                                                        questions[currentQuestionIndex]?.questionType.toLowerCase() === "multiple"
-                                                    )
-                                                }
-                                                    style={{ cursor: "pointer" }}>
-                                                    <img src={image} alt={`Option ${index}`} className="img-fluid rounded" style={{ width: "100px", objectFit: "cover" }} />
-                                                </div>
-                                            })}
+                                {questions[currentQuestionIndex].type === "image" &&
+                                    <div className="col-md-6 col-sm-12 col-12 mb-2" >
+                                        <div className=" d-flex justify-content-center align-items-center rounded-2" >
+                                            <div className="option-images row w-75 g-2 px-2 pb-2 ">
+                                                {questions[currentQuestionIndex]?.images.map((image, index) => (
+                                                    <div className="col-6 " key={`image-${index}`}>
+                                                        <div className={`option-image-container ${userAnswers[questions[currentQuestionIndex]?.id]?.includes(questions[currentQuestionIndex]?.options[index]) ? "option-image-active" : ""}`}
+                                                            onClick={() =>
+                                                                handleOptionChange(
+                                                                    questions[currentQuestionIndex]?.id,
+                                                                    questions[currentQuestionIndex]?.options[index],
+                                                                    questions[currentQuestionIndex]?.questionType.toLowerCase() === "multiple"
+                                                                )
+                                                            }
+                                                        >
+                                                            <img
+                                                                src={image}
+                                                                alt={`Option ${index}`}
+                                                                className="option-image"
+
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+
                                         </div>
                                     </div>
-                                )}
+                                }
                             </div>
                         }
 
@@ -237,18 +247,7 @@ const Assessment = ({ onDataChange, category, Questions, QuestionCount, Score })
 
             </Modal.Footer>
 
-            {
-                submitStatus && (
-                    <div className="loading-overlay">
-                        <Player
-                            autoplay
-                            speed={0.5}
-                            src={submitted}
-                            style={{ height: "200px", width: "200px" }}
-                        />
-                    </div>
-                )
-            }
+           
         </div >
     );
 };

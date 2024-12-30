@@ -1,12 +1,12 @@
 
-import Image1 from "../assets/Learnings/work 2.svg";
-import Image2 from "../assets/Learnings/data 2.svg";
-import Image3 from "../assets/Learnings/employee 2.svg";
-import Image4 from "../assets/Learnings/navigating 2.svg";
-import Image5 from "../assets/Learnings/speak 2.svg";
-import Image6 from "../assets/Learnings/problem 2.svg";
-import Image7 from "../assets/Learnings/team 2.svg";
-import Image8 from "../assets/Learnings/time 2.svg";
+import Image1 from "../assets/Learnings/work.png";
+import Image2 from "../assets/Learnings/data.png";
+import Image3 from "../assets/Learnings/employee.png";
+import Image4 from "../assets/Learnings/navigating.png";
+import Image5 from "../assets/Learnings/speak.png";
+import Image6 from "../assets/Learnings/problem.png";
+import Image7 from "../assets/Learnings/team.png";
+import Image8 from "../assets/Learnings/time.png";
 
 
 import policyTemplate from '../assets/PolicyTemplate.pdf';

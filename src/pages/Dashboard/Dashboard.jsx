@@ -278,7 +278,7 @@ const Dashboard = () => {
     const scheduleScroll = useScroll();
 
     return (
-        <div className="container-fluid dashboard" >
+        <div className="dashboard" >
             <div className="row flex-md-row-reverse mt-2">
                 <div className="col-md-12 col-lg-4 col-sm-12  mb-3 ">
                     <div className="d-flex flex-md-row flex-column flex-lg-column align-items-center shadow rounded-4 p-2 h-100">

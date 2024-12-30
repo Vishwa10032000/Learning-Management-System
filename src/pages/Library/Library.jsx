@@ -110,9 +110,9 @@ const Library = () => {
 
 
             <Link to={`/library/${course.category}/${course.id}`} className='text-decoration-none text-dark' >
-                <div className="library-card border bg-light rounded-4 h-100">
-                    <div className="position-relative">
-                        <img src={course.thumbnailImage} alt={course.title} className="rounded-3 img-fluid" width="100%" />
+                <div className="library-card border d-flex flex-column justify-content-between bg-light rounded-4 h-100">
+                    <div className="library-image-container">
+                        <img src={course.thumbnailImage} alt={course.title} className="library-image" width="100%" height="100%" />
                     </div>
                     <div className="p-3 d-flex flex-column justify-content-between">
                         <div className=" d-flex justify-content-between mb-2">
@@ -208,7 +208,7 @@ const Library = () => {
     return (
         <div className="container-fluid mt-3">
             <div className="d-flex justify-content-between">
-                <h3>All {statusFilter === "Policies" ? "Policies" : (statusFilter === "Orientations" ? "Orientations" : (statusFilter === "Trainings" ? "Trainings" : " Learnings "))}</h3>
+                <h5>All {statusFilter === "Policies" ? "Policies" : (statusFilter === "Orientations" ? "Orientations" : (statusFilter === "Trainings" ? "Trainings" : " Learnings "))}</h5>
                 <div>
                     <div className="d-flex gap-3">
                         <Select

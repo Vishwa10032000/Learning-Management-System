@@ -1,4 +1,5 @@
 {
+  "homepage": "https://vishwa10032000.github.io/Learning-Management-System",
   "name": "learning-management-system",
   "private": true,
   "version": "0.0.0",
@@ -7,19 +8,20 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "@lottiefiles/react-lottie-player": "^3.5.4",
     "@mui/material": "^6.2.1",
     "@mui/styled-engine-sc": "^6.2.1",
     "bootstrap": "^5.3.3",
     "crypto-js": "^4.2.0",
     "emoji-picker-react": "^4.12.0",
     "framer-motion": "^11.15.0",
-    "lottie-react": "^2.4.0",
+    "gh-pages": "^6.2.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.7",
     "react-dnd": "^16.0.1",

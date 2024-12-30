@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Player } from '@lottiefiles/react-lottie-player';
+// import { Player } from '@lottiefiles/react-lottie-player';
 import './LibraryIndividualPage.css';
 import { IoIosArrowForward } from 'react-icons/io';
 import { LuShare2 } from 'react-icons/lu';
@@ -161,7 +161,7 @@ const LibraryIndividualPage = ({userType}) => {
   return (
     <div className="library-individual-page">
       <ToastContainer />
-      {isLoading && (
+      {/* {isLoading && (
         <div className="loading-overlay">
           <Player
             autoplay
@@ -170,9 +170,9 @@ const LibraryIndividualPage = ({userType}) => {
             style={{ height: '200px', width: '200px' }}
           />
         </div>
-      )}
+      )} */}
 
-      {!isLoading && (
+      {/* {!isLoading && ( */}
         <div className="row">
           <div className="col-md-8">
             <div className="d-flex align-items-center justify-content-between">
@@ -255,7 +255,7 @@ const LibraryIndividualPage = ({userType}) => {
             {userType === "Admin" && <div className='d-flex justify-content-center   gap-2 my-3'><button className='upload-button d-flex align-items-center justify-content-center gap-1' onClick={handleSubmit}><MdPublish size={24}/> Publish</button><button className='upload-button d-flex align-items-center justify-content-center gap-2' onClick={handleSubmit}><GiReturnArrow size={20} />Return</button></div>}
           </div>
         </div>
-      )}
+      {/* )} */}
 
       {showShareModal && (
         <div className="modal-share">

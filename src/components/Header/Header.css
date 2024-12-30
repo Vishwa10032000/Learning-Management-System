@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .header-title{
@@ -82,4 +83,93 @@
     font-weight: 500;
     color: var(--primary-color);
     
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border:1px solid #F67741;
+    padding: 4px 8px;
+    color: #F67741;
+    border-radius: 4px;
+  }
+  
+  .menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-items {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu-items.show {
+    display: block;
+  }
+  
+  @media (max-width: 767px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .menu-items {
+      display: none;
+      flex-direction: column;
+      background-color: var(--secondary-color);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      z-index: 10;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .menu-items.show {
+      display: flex;
+    }
+
+    .header-menu {
+      position: absolute;
+      top: 100%;
+      padding: 10px;
+      border-radius: 20px;
+      right: 0;
+      z-index: 100;
+      background: #f5f5f5;
+      display: block; /* Change from 'none' for animation purposes */
+      opacity: 0; /* Set initial opacity to 0 */
+      transform: translateY(-10px); /* Start slightly above */
+      transition: opacity 0.3s ease, transform 0.3s ease; /* Add smooth transitions */
+      pointer-events: none; /* Prevent interaction when hidden */
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+     /* border:1px solid #F67741; */
+    }
+    
+    .header-menu.active {
+      opacity: 1; /* Make it fully visible */
+      transform: translateY(0); /* Move to its original position */
+      pointer-events: auto; /* Enable interaction */
+    }    
+  }
+  
+
+  @media (min-width: 767px) {
+    .header-items {
+      display: none;
+    }
+  
+    .header-title {
+      font-size: 16px;
+    }
+
+    .menu-toggle{
+      display: none;
+    }
+    
+  
+
   }
